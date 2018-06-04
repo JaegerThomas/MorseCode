@@ -157,7 +157,7 @@ void sendMorse(char character) {
 int main() {
 
   // to do
-
+  cout << "in main" << "\n";
   pullUpDnControl(INPUT_PIN, PUD_UP);
   //wiringPiISR(INPUT_PIN, INT_EDGE_BOTH, &switchChanged);
   int character;
