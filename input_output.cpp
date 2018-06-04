@@ -3,8 +3,8 @@
 #include <iostream>
 #include <wiringPi.h>
 
-#define OUTPUT_PIN 2
-#define INPUT_PIN 3
+#define OUTPUT_PIN 0
+#define INPUT_PIN 2
 
 using namespace std;
 
