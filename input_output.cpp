@@ -159,7 +159,7 @@ int main() {
   // to do
 
   pullUpDnControl(INPUT_PIN, PUD_UP);
-  wiringPiISR(INPUT_PIN, INT_EDGE_BOTH);
+  //wiringPiISR(INPUT_PIN, INT_EDGE_BOTH, &switchChanged);
   int character;
   while (true) {
     character = getchar();
