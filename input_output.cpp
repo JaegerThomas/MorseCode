@@ -3,8 +3,7 @@
 #include <iostream>
 #include <wiringPi.h>
 
-#define OUTPUT_PIN 0
-#define INPUT_PIN 2
+#define OUTPUT_PIN 2
 
 using namespace std;
 
@@ -155,11 +154,7 @@ void sendMorse(char character) {
 }
 
 int main() {
-
-  // to do
   cout << "in main" << "\n";
-  pullUpDnControl(INPUT_PIN, PUD_UP);
-  //wiringPiISR(INPUT_PIN, INT_EDGE_BOTH, &switchChanged);
   int character;
   while (true) {
     character = getchar();
@@ -171,44 +166,3 @@ int main() {
     }
   }
 }
-
-/*
-void switchChanged() {
-  static string buffer;
-  static unsigned int previousTime = 0, currentTime, timePassed;
-  currentTime = millis();
-  if (previousTime == 0) { // first pulse
-    previousTime = currentTime;
-    return;
-  }
-  timePassed = currentTime - previousTime;
-  previousTime = currentTime;
-  if (digitalRead(INPUT_PIN) == HIGH)
-  {
-    if (timePassed > 200) {
-
-      // TO DO
-
-    }
-    if (timePassed > 600) {
-
-      // TO DO
-
-    }
-  }
-
-  if(digitalRead(INPUT_PIN) == LOW)
-  {
-    if (timePassed > 200) {
-
-      // TO DO
-
-    }
-    else {
-
-      // TO DO
-
-    }
-  }
-}
-*/
